@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 
 class BookMarkActivity : AppCompatActivity() {
 
@@ -23,26 +24,30 @@ class BookMarkActivity : AppCompatActivity() {
         bookmarkListView = findViewById(R.id.bookmark_listview)
         emptyMessageTextView = findViewById(R.id.emptyMessageTextView)
 
+        // Get bookmarks, safely handling missing key.
         val bookmarkedPlants = sharedPreferences.getStringSet("bookmarks", mutableSetOf()) ?: mutableSetOf()
 
         if (bookmarkedPlants.isEmpty()) {
-            emptyMessageTextView.visibility = TextView.VISIBLE
-            bookmarkListView.visibility = ListView.GONE
+            emptyMessageTextView.visibility = View.VISIBLE
+            bookmarkListView.visibility = View.GONE
         } else {
-            emptyMessageTextView.visibility = TextView.GONE
-            bookmarkListView.visibility = ListView.VISIBLE
+            emptyMessageTextView.visibility = View.GONE
+            bookmarkListView.visibility = View.VISIBLE
             val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, bookmarkedPlants.toList())
             bookmarkListView.adapter = adapter
         }
 
+        // Retrieve username and email
         val username = intent.getStringExtra("USERNAME")
         val email = intent.getStringExtra("EMAIL")
 
+        // Back button with simplified lambda function
         val backButton = findViewById<ImageButton>(R.id.Back_ImageButton)
         backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("USERNAME", username)
-            intent.putExtra("EMAIL", email)
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("USERNAME", username)
+                putExtra("EMAIL", email)
+            }
             startActivity(intent)
         }
     }
