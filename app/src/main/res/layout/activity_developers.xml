@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/developers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".DevelopersActivity">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/back_button"/>
+
+    <TextView
+        android:id="@+id/developers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Developers"
+        android:textSize="24sp"
+        android:textColor="#70A654"
+        android:fontFamily="@font/delius_swash_caps_regular"/>
+
+    <RelativeLayout
+        android:id="@+id/pol_bar"
+        android:layout_below="@id/developers_text"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/pol_pfp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/img_6"/>
+        <TextView
+            android:id="@+id/pol_name"
+            android:layout_toRightOf="@id/pol_pfp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Paul Vincent T. Lepatan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/pol_email"
+            android:layout_below="@id/pol_name"
+            android:layout_toRightOf="@id/pol_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lepatanpaul123@gmail.com"
+            android:textSize="13sp"
+            android:textColor="#6A6A6A"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/pol_position"
+            android:layout_below="@id/pol_email"
+            android:layout_toRightOf="@id/pol_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Leader and Full-Stack Developer"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:textColor="#74BD5C"/>
+        <TextView
+            android:id="@+id/pol_desc"
+            android:layout_below="@id/pol_position"
+            android:layout_toRightOf="@id/pol_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leading the team with technical expertise and vision, bridging the gap between frontend and backend development."
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact"
+            android:layout_below="@id/pol_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fun Fact:"
+            android:textColor="#74BD5C"
+            android:textSize="15sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact_desc"
+            android:layout_below="@id/funfact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enjoys solving complex problems and is a gaming fanatic!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/brix_bar"
+        android:layout_below="@id/pol_bar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true">
+        
+        <ImageView
+            android:id="@+id/brix_pfp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/img_7"/>
+        <TextView
+            android:id="@+id/brix_name"
+            android:layout_toRightOf="@id/brix_pfp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Maverick Angelo I. Beltran"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/brix_email"
+            android:layout_below="@id/brix_name"
+            android:layout_toRightOf="@id/brix_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mavbriks@gmail.com"
+            android:textSize="13sp"
+            android:textColor="#6A6A6A"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/brix_position"
+            android:layout_below="@id/brix_email"
+            android:layout_toRightOf="@id/brix_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Backend Developer"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:textColor="#74BD5C"/>
+        <TextView
+            android:id="@+id/brix_desc"
+            android:layout_below="@id/brix_position"
+            android:layout_toRightOf="@id/brix_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expert in server-side ensuring smooth and efficient application performance."
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact1"
+            android:layout_below="@id/brix_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fun Fact:"
+            android:textColor="#74BD5C"
+            android:textSize="15sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact_desc1"
+            android:layout_below="@id/funfact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silent but deadly."
+            android:textColor="@color/white"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabs_bar"
+        android:layout_below="@id/brix_bar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/tabs_pfp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/img_8"/>
+        <TextView
+            android:id="@+id/tabs_name"
+            android:layout_toRightOf="@id/tabs_pfp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Kristabelle Ricsan P. Lapidez"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/tabs_email"
+            android:layout_below="@id/tabs_name"
+            android:layout_toRightOf="@id/tabs_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lapidezkristabelle@gmail.com"
+            android:textSize="13sp"
+            android:textColor="#6A6A6A"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/tabs_position"
+            android:layout_below="@id/tabs_email"
+            android:layout_toRightOf="@id/tabs_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Frontend Developer"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:textColor="#74BD5C"/>
+        <TextView
+            android:id="@+id/tabs_desc"
+            android:layout_below="@id/tabs_position"
+            android:layout_toRightOf="@id/tabs_pfp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passionate about UI/UX design and frontend development, bringing creative and functional web applications to life."
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact2"
+            android:layout_below="@id/tabs_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fun Fact:"
+            android:textColor="#74BD5C"
+            android:textSize="15sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+        <TextView
+            android:id="@+id/funfact_desc2"
+            android:layout_below="@id/funfact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loves creating aesthetic UI designs and is a cat enthusiast!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</ScrollView>

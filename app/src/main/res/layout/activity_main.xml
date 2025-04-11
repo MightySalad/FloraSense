@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/FloraSense_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:text="Flora Sense"
+        android:textSize="24sp"
+        android:fontFamily="@font/delius_swash_caps_regular"/>
+    
+    <ImageButton
+        android:id="@+id/Notification_ImageButton"
+        android:layout_toRightOf="@+id/FloraSense_Text"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="190dp"
+        android:background="@drawable/notification_icon"/>
+
+    <EditText
+        android:id="@+id/Search_Bar"
+        android:layout_below="@id/FloraSense_Text"
+        android:layout_width="356dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Search"
+        android:textSize="15sp"
+        android:fontFamily="@font/delius_swash_caps_regular"
+        android:textColorHint="#6A6A6A"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/Trivia_Section"
+        android:layout_below="@id/Search_Bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="356dp"
+        android:layout_height="101dp"
+        android:orientation="vertical"
+        android:background="@drawable/img"
+        android:padding="20dp">
+        
+        <TextView
+            android:id="@+id/Trivia_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trivia"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/Trivia_desc"
+            android:layout_below="@id/Trivia_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plants release distress signals when under stress."
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/delius_swash_caps_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Filter_Section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Trivia_Section"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <Button
+            android:id="@+id/All_Filter_Button"
+            android:layout_marginTop="31dp"
+            android:layout_width="56dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rounded_button"
+            android:text="All"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+        <Button
+            android:id="@+id/Indoor_Filter_Button"
+            android:layout_toRightOf="@id/All_Filter_Button"
+            android:layout_marginTop="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="84dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rounded_button"
+            android:text="Indoor"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+        <Button
+            android:id="@+id/Outdoor_Filter_Button"
+            android:layout_toRightOf="@id/Indoor_Filter_Button"
+            android:layout_marginTop="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="84dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rounded_button"
+            android:text="Outdoor"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+
+        <Button
+            android:id="@+id/Popular_Filter_Button"
+            android:layout_toRightOf="@id/Outdoor_Filter_Button"
+            android:layout_marginTop="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_width="84dp"
+            android:layout_height="21dp"
+            android:background="@drawable/rounded_button"
+            android:text="Popular"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:fontFamily="@font/delius_swash_caps_regular"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/plantSelections"
+        android:layout_below="@id/Filter_Section"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/plant_1"
+            android:layout_width="158dp"
+            android:layout_height="209dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_bg">
+
+            <TextView
+                android:id="@+id/SnakePlant_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snake Plant"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/delius_swash_caps_regular"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/snakePlant"
+                android:layout_below="@id/SnakePlant_Text"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_1"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/moreInfo_Button"
+                android:layout_below="@id/snakePlant"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_button_mk1"
+                android:text="More Information"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_regular"/>
+
+            <RelativeLayout
+                android:id="@+id/bookmark"
+                android:layout_below="@id/snakePlant"
+                android:layout_toRightOf="@id/moreInfo_Button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_button_mk2"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_2" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plant_2"
+            android:layout_toRightOf="@id/plant_1"
+            android:layout_width="158dp"
+            android:layout_height="209dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_bg">
+
+            <TextView
+                android:id="@+id/MonsteraPlant_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monstera Plant"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/delius_swash_caps_regular"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/monsteraPlant"
+                android:layout_below="@id/MonsteraPlant_Text"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_3"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/moreInfo_Button2"
+                android:layout_below="@id/monsteraPlant"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_button_mk1"
+                android:text="More Information"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_regular"/>
+
+            <RelativeLayout
+                android:id="@+id/bookmark2"
+                android:layout_below="@id/monsteraPlant"
+                android:layout_toRightOf="@id/moreInfo_Button2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_button_mk2"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/img_2"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plant_3"
+            android:layout_below="@id/plant_1"
+            android:layout_width="158dp"
+            android:layout_height="209dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_bg">
+
+            <TextView
+                android:id="@+id/FalseShamrock_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False Shamrock"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/delius_swash_caps_regular"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/falseShamrock"
+                android:layout_below="@id/FalseShamrock_Text"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_4"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/moreInfo_Button3"
+                android:layout_below="@id/falseShamrock"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_button_mk1"
+                android:text="More Information"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_regular"/>
+
+            <RelativeLayout
+                android:id="@+id/bookmark3"
+                android:layout_below="@id/falseShamrock"
+                android:layout_toRightOf="@id/moreInfo_Button3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_button_mk2"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/img_2"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plant_4"
+            android:layout_below="@id/plant_2"
+            android:layout_toRightOf="@id/plant_3"
+            android:layout_width="158dp"
+            android:layout_height="209dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_bg">
+
+            <TextView
+                android:id="@+id/BarrelCactus_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barrel Cactus"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/delius_swash_caps_regular"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/BarrelCactus"
+                android:layout_below="@id/BarrelCactus_Text"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_5"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/moreInfo_Button4"
+                android:layout_below="@id/BarrelCactus"
+                android:layout_width="110dp"
+                android:layout_height="25dp"
+                android:background="@drawable/rounded_button_mk1"
+                android:text="More Information"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_regular"/>
+
+            <RelativeLayout
+                android:id="@+id/bookmark4"
+                android:layout_below="@id/BarrelCactus"
+                android:layout_toRightOf="@id/moreInfo_Button4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_button_mk2"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/img_2"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigationBar"
+        android:layout_below="@id/plantSelections"
+        android:background="@drawable/rounded_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="356dp"
+        android:layout_height="65dp">
+
+        <RelativeLayout
+            android:id="@+id/navigationButtons"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/Home_ImageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_icon"/>
+
+            <ImageButton
+                android:id="@+id/List_ImageButton"
+                android:layout_toRightOf="@id/Home_ImageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/list_icon"/>
+
+            <RelativeLayout
+                android:id="@+id/Scan"
+                android:layout_toRightOf="@id/List_ImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/rounded_button_mk3">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/scan_icon"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/Bookmark_ImageButton"
+                android:layout_toRightOf="@id/Scan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/bookmark_icon"/>
+
+            <ImageButton
+                android:id="@+id/Profile_ImageButton"
+                android:layout_toRightOf="@id/Bookmark_ImageButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/user_icon"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

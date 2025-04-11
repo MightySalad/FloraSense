@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:id="@+id/getStartedmk2">
+
+    <ImageView
+        android:id="@+id/FloraSense_Logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/flora_sense_logo"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/FloraSense_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Flora Sense"
+        android:textSize="48sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/delius_swash_caps_regular"/>
+
+    <TextView
+        android:id="@+id/FloraSense_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Your plant care companion."
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_font"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/Login_Button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/curved_button"
+        android:fontFamily="@font/roboto_font"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/Separator"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center">
+        <View
+            android:layout_width="250dp"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/SignUp_Button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/landing_button"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_font"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
