@@ -1,52 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E1E1E"
-    android:orientation="vertical"
-    android:id="@+id/profile">
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/Back_ImageButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_margin="30dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:fontFamily="@font/delius_swash_caps_regular"
+        android:text="Profile"
+        android:textColor="#70A654"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031"
+        tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/Back_ImageButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/back_button"/>
-
-        <TextView
-            android:id="@+id/profile_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="128dp"
-            android:layout_marginRight="30dp"
-            android:fontFamily="@font/delius_swash_caps_regular"
-            android:text="Profile"
-            android:textColor="#70A654"
-            android:textSize="24sp" />
-
-        <ImageButton
-            android:id="@+id/settings_imageButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="100dp"
-            android:background="@drawable/setting_icon"/>
-
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/settings_imageButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/setting_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
+        android:id="@+id/linear2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:gravity="center">
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_text">
 
         <ImageView
+            android:id="@+id/Image"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:clickable="true"
@@ -63,7 +82,11 @@
         android:gravity="center"
         android:text="Gar Field"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear2"/>
 
     <TextView
         android:id="@+id/email_text"
@@ -73,17 +96,25 @@
         android:gravity="center"
         android:text="Whiskas@gmail.com"
         android:textColor="#6A6A6A"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username_text"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/linear3"
+        android:layout_width="336dp"
+        android:layout_height="277dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:padding="20dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/rounded_button"
         android:gravity="top|center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_text">
 
         <LinearLayout
             android:layout_width="300dp"
@@ -102,8 +133,8 @@
                 android:id="@+id/usernameBox_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="Gar Field"
                 android:textColor="@color/black"
@@ -137,8 +168,8 @@
                 android:id="@+id/emailBox_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="Whiskas@gmail.com"
                 android:textColor="@color/black"
@@ -171,8 +202,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="09123456789"
                 android:textColor="@color/black"
@@ -205,8 +236,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="Biasong, Talisay City"
                 android:textColor="@color/black"
@@ -240,8 +271,8 @@
                 android:id="@+id/passwordBox_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="****************"
                 android:textColor="@color/black"
@@ -260,14 +291,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
+        android:id="@+id/linear4"
+        android:layout_width="334dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
         android:gravity="top|center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear3">
 
         <LinearLayout
             android:layout_width="300dp"
@@ -285,8 +320,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="Support"
                 android:textColor="@color/black"
@@ -319,8 +354,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="20dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/delius_swash_caps_regular"
                 android:text="Privacy and Policy"
                 android:textColor="@color/black"
@@ -340,15 +375,19 @@
 
     <Button
         android:id="@+id/logout_button"
-        android:layout_width="336dp"
-        android:layout_height="50dp"
+        android:layout_width="318dp"
+        android:layout_height="49dp"
         android:layout_gravity="center"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/logout_button_gradient"
         android:fontFamily="@font/roboto_font"
         android:text="Log Out"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear4" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
