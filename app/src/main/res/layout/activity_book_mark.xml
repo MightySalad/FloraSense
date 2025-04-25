@@ -13,7 +13,9 @@
         android:id="@+id/Back_ImageButton"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:background="@drawable/back_button"/>
+        android:background="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/Bookmark_text"
@@ -23,7 +25,9 @@
         android:fontFamily="@font/delius_swash_caps_regular"
         android:text="Bookmarks"
         android:textColor="#70A654"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/emptyMessageTextView"
@@ -43,6 +47,10 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Bookmark_text"/>
 
 </RelativeLayout>

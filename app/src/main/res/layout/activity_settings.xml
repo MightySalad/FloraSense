@@ -7,25 +7,30 @@
     android:layout_height="match_parent"
     android:background="#1E1E1E"
     tools:context=".SettingsActivity">
-    
+
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
-        android:background="@drawable/back_button"/>
+        android:background="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/settings_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:text="Settings"
         android:textSize="24sp"
         android:textColor="#70A654"
-        android:fontFamily="@font/delius_swash_caps_regular"/>
+        android:fontFamily="@font/delius_swash_caps_regular"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/Search_Bar"
@@ -40,33 +45,42 @@
         android:textColorHint="#6A6A6A"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_text"/>
 
     <RelativeLayout
         android:id="@+id/customziables_bar"
+        android:layout_width="329dp"
+        android:layout_height="269dp"
         android:layout_below="@id/Search_Bar"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:padding="15dp"
         android:background="@drawable/rounded_button"
-        android:layout_centerHorizontal="true">
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Search_Bar">
 
         <ImageView
             android:id="@+id/darkMode_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/dark_mode_icon"/>
+            android:src="@drawable/dark_mode_icon" />
+
         <TextView
             android:id="@+id/darkMode_text"
-            android:layout_toRightOf="@id/darkMode_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_toRightOf="@id/darkMode_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Dark Mode"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
 
         <Switch
             android:id="@+id/next_button"
@@ -78,270 +92,302 @@
 
         <ImageView
             android:id="@+id/notification_icon"
-            android:layout_below="@id/darkMode_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/darkMode_icon"
             android:layout_marginTop="34dp"
-            android:src="@drawable/notification_icon"/>
+            android:src="@drawable/notification_icon" />
+
         <TextView
             android:id="@+id/notification_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/darkMode_text"
-            android:layout_toRightOf="@id/notification_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/darkMode_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/notification_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Notifications and Sounds"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button2"
-            android:layout_toRightOf="@id/notification_text"
-            android:layout_below="@id/next_button"
-            android:layout_marginTop="23dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="68dp"/>
+            android:layout_below="@id/next_button"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@id/notification_text"
+            android:background="@drawable/next_icon" />
 
         <ImageView
             android:id="@+id/storage_icon"
-            android:layout_below="@id/notification_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/notification_icon"
             android:layout_marginTop="34dp"
-            android:src="@drawable/storage_icon"/>
+            android:src="@drawable/storage_icon" />
+
         <TextView
             android:id="@+id/storage_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/notification_text"
-            android:layout_toRightOf="@id/notification_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/notification_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/notification_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Data and Storage"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button3"
-            android:layout_toRightOf="@id/storage_text"
-            android:layout_below="@id/next_button2"
-            android:layout_marginTop="34dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="120dp"/>
+            android:layout_below="@id/next_button2"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="36dp"
+            android:layout_toRightOf="@id/storage_text"
+            android:background="@drawable/next_icon" />
 
         <ImageView
             android:id="@+id/power_icon"
-            android:layout_below="@id/storage_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/storage_icon"
             android:layout_marginTop="34dp"
-            android:src="@drawable/power_saving_icon"/>
+            android:src="@drawable/power_saving_icon" />
+
         <TextView
             android:id="@+id/power_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/storage_text"
-            android:layout_toRightOf="@id/power_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/storage_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/power_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Power Saving"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
 
         <ImageButton
             android:id="@+id/next_button4"
-            android:layout_width="17dp"
-            android:layout_height="16dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_below="@id/next_button3"
-            android:layout_marginStart="145dp"
+            android:layout_marginLeft="123dp"
             android:layout_marginTop="34dp"
             android:layout_toRightOf="@id/power_text"
             android:background="@drawable/next_icon" />
 
         <ImageView
             android:id="@+id/language_icon"
-            android:layout_below="@id/power_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/power_icon"
             android:layout_marginTop="34dp"
-            android:src="@drawable/language_icon"/>
+            android:src="@drawable/language_icon" />
+
         <TextView
             android:id="@+id/language_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/power_text"
-            android:layout_toRightOf="@id/language_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/power_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/language_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Language"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button5"
-            android:layout_toRightOf="@id/language_text"
-            android:layout_below="@id/next_button4"
-            android:layout_marginTop="34dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="170dp"/>
+            android:layout_below="@id/next_button4"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/language_text"
+            android:background="@drawable/next_icon" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/subscriptions_text"
         android:layout_below="@+id/customziables_bar"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="22dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subscriptions"
         android:textSize="20sp"
         android:textColor="#70A654"
-        android:fontFamily="@font/delius_swash_caps_regular"/>
+        android:fontFamily="@font/delius_swash_caps_regular"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customziables_bar" />
 
     <RelativeLayout
         android:id="@+id/subscriptions_bar"
+        android:layout_width="330dp"
+        android:layout_height="103dp"
         android:layout_below="@id/subscriptions_text"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:padding="15dp"
         android:background="@drawable/rounded_button"
-        android:layout_centerHorizontal="true">
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subscriptions_text">
 
         <ImageView
             android:id="@+id/remove_ads"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/remove_ads_icon"/>
+            android:src="@drawable/remove_ads_icon" />
+
         <TextView
             android:id="@+id/removeAds_text"
-            android:layout_toRightOf="@id/remove_ads"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_toRightOf="@id/remove_ads"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Remove Ads"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button6"
-            android:layout_toRightOf="@id/removeAds_text"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="150dp"/>
+            android:layout_marginLeft="129dp"
+            android:layout_toRightOf="@id/removeAds_text"
+            android:background="@drawable/next_icon" />
 
         <ImageView
             android:id="@+id/premium_icon"
-            android:layout_below="@id/remove_ads"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/remove_ads"
             android:layout_marginTop="34dp"
-            android:src="@drawable/premium_icon"/>
+            android:src="@drawable/premium_icon" />
+
         <TextView
             android:id="@+id/premium_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/removeAds_text"
-            android:layout_toRightOf="@id/premium_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/removeAds_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/premium_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Buy Premium"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button7"
-            android:layout_toRightOf="@id/premium_text"
-            android:layout_below="@id/next_button6"
-            android:layout_marginTop="34dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="145dp"/>
+            android:layout_below="@id/next_button6"
+
+            android:layout_marginLeft="122dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/premium_text"
+            android:background="@drawable/next_icon" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/aboutApp_text"
         android:layout_below="@+id/subscriptions_bar"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="22dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About App"
         android:textSize="20sp"
         android:textColor="#70A654"
-        android:fontFamily="@font/delius_swash_caps_regular"/>
+        android:fontFamily="@font/delius_swash_caps_regular"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subscriptions_bar" />
 
     <RelativeLayout
         android:id="@+id/aboutApp_Bar"
+        android:layout_width="328dp"
+        android:layout_height="110dp"
         android:layout_below="@id/aboutApp_text"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:padding="15dp"
         android:background="@drawable/rounded_button"
-        android:layout_centerHorizontal="true">
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutApp_text">
 
         <ImageView
             android:id="@+id/terms_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/terms_and_condition_icon"/>
+            android:src="@drawable/terms_and_condition_icon" />
+
         <TextView
             android:id="@+id/terms_text"
-            android:layout_toRightOf="@id/terms_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_toRightOf="@id/terms_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Terms and Conditions"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button8"
-            android:layout_toRightOf="@id/terms_text"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="93dp"/>
+            android:layout_marginLeft="69dp"
+            android:layout_toRightOf="@id/terms_text"
+            android:background="@drawable/next_icon" />
 
         <ImageView
             android:id="@+id/developer_icon"
-            android:layout_below="@id/terms_icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_below="@id/terms_icon"
             android:layout_marginTop="34dp"
-            android:src="@drawable/developer_icon"/>
+            android:src="@drawable/developer_icon" />
+
         <TextView
             android:id="@+id/developer_text"
-            android:layout_marginTop="34dp"
-            android:layout_below="@id/terms_text"
-            android:layout_toRightOf="@id/developer_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/terms_text"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="34dp"
+            android:layout_toRightOf="@id/developer_icon"
+            android:fontFamily="@font/delius_swash_caps_regular"
             android:text="Developers"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_marginStart="41dp"
-            android:fontFamily="@font/delius_swash_caps_regular"/>
+            android:textSize="15sp" />
+
         <ImageButton
             android:id="@+id/next_button9"
-            android:layout_toRightOf="@id/developer_text"
-            android:layout_below="@id/next_button8"
-            android:layout_marginTop="34dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/next_icon"
-            android:layout_marginStart="165dp"/>
+            android:layout_below="@id/next_button8"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="36dp"
+            android:layout_toRightOf="@id/developer_text"
+            android:background="@drawable/next_icon" />
     </RelativeLayout>
 
     <TextView
@@ -353,6 +399,10 @@
         android:layout_height="wrap_content"
         android:text="Restore Purchases"
         android:textColor="#6A6A6A"
-        android:fontFamily="@font/delius_swash_caps_regular"/>
+        android:fontFamily="@font/delius_swash_caps_regular"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutApp_Bar" />
 
 </RelativeLayout>
