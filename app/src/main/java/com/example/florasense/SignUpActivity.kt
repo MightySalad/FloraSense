@@ -7,10 +7,14 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.florasense.data.model.UserModel
+import com.example.florasense.viewModel.UserViewModel
 
 class SignUpActivity : AppCompatActivity() {
 
+    private val userViewModel: UserViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -52,9 +56,24 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+
         alreadyHaveAccount.setOnClickListener {
             val intent = Intent(this, LogInActivity::class.java)
             startActivity(intent)
         }
+        addUsers()
+    }
+    private fun addUsers() {
+        findViewById<Button>(R.id.SignUp_Button).setOnClickListener {
+            val username = findViewById<EditText>(R.id.Username_EditText).text.toString()
+            val email = findViewById<EditText>(R.id.Email_EditText).text.toString()
+            val password = findViewById<EditText>(R.id.Password_EditText).text.toString()
+            val confirmPassword = findViewById<EditText>(R.id.ConfirmPassword_EditText).text.toString()
+
+            val user = UserModel(username, email, password, confirmPassword)
+            userViewModel.registerUser(user)
+
+        }
+
     }
 }
